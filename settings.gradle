@@ -1,0 +1,6 @@
+rootProject.name = 'bleg-starter'
+include 'bleg-starter-api'
+include 'bleg-starter-utils'
+include 'bleg-starter-web'
+include 'bleg-starter-redis'
+

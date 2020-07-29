@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+}
+
+group 'org.bleg'
+version '0.0.1-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+// 配置阿里云 云效果 私有仓库
+allprojects {
+    repositories {
+        maven {
+            url 'https://maven.aliyun.com/repository/public'
+        }
+
+        maven {
+            credentials {
+                username 'lrOSns'
+                password 'IAt6DNq7Mw'
+            }
+            url 'https://repo.rdc.aliyun.com/repository/116450-release-3wlQLE/'
+        }
+        maven {
+            credentials {
+                username 'lrOSns'
+                password 'IAt6DNq7Mw'
+            }
+            url 'https://repo.rdc.aliyun.com/repository/116450-snapshot-SOwFvN/'
+        }
+    }
+}
